@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Kumar | DevOps Manager Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-color: #00d2ff;
+            --text-main: #ffffff;
+            --text-dim: #b0b0b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top right, #1a1a2e, #16213e, #0f3460);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Glassmorphism Container --- */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            padding: 15px 30px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+
+        /* --- Tech Stack Grid --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            padding: 40px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        /* --- Experience Timeline --- */
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            background: var(--accent-color);
+            color: #000;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { width: 95%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="glass-card">
+        <div class="logo">AMIT KUMAR</div>
+        <div class="nav-links">
+            <a href="#about" style="color: white; text-decoration: none; margin-left: 20px;">Expertise</a>
+            <a href="#experience" style="color: white; text-decoration: none; margin-left: 20px;">Experience</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Amit Kumar</h1>
+        <p>DevOps Manager & Infrastructure Architect</p>
+        <div style="font-size: 1.1rem; color: var(--text-dim); max-width: 600px;">
+            16+ years of experience in orchestrating cloud environments, automating delivery pipelines, and scaling enterprise systems.
+        </div>
+    </section>
+
+    <div class="container" id="about">
+        <h2 class="section-title">Core Expertise</h2>
+        <div class="grid">
+            <div class="skill-card glass-card">
+                <i class="fas fa-cubes"></i>
+                <h3>Kubernetes</h3>
+                <p>Advanced orchestration and container management (CKA/CKS certified).</p>
+            </div>
+            <div class="skill-card glass-card">
+                <i class="fas fa-cloud"></i>
+                <h3>AWS Cloud</h3>
+                <p>Architecting scalable, resilient cloud infrastructure on Amazon Web Services.</p>
+            </div>
+            <div class="skill-card glass-card">
+                <i class="fas fa-code-branch"></i>
+                <h3>Infrastructure as Code</h3>
+                <p>Automating environments with Terraform, Ansible, and Python.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="experience">
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="experience-item glass-card">
+            <span class="badge">MANAGER</span>
+            <h3>DevOps Manager</h3>
+            <p style="color: var(--accent-color); margin-bottom: 10px;">Bengaluru, India</p>
+            <p>Leading high-performance teams to bridge the gap between development and operations. Specialized in RHCE, AWS, and secure automation frameworks (Vault).</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Amit Kumar. Based in Bengaluru.</p>
+        <div style="margin-top: 20px; font-size: 1.5rem;">
+            <i class="fab fa-linkedin" style="margin: 0 15px; cursor: pointer;"></i>
+            <i class="fab fa-github" style="margin: 0 15px; cursor: pointer;"></i>
+        </div>
+    </footer>
+
+</body>
+</html>
